@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            margin-top:10px;
+        }
+    #stdform{
+        box-shadow: 0px 0px 5px;
+        width: 40%;
+        padding: 10px;
+        margin-top: 20vh;
+        margin-left: 30vw;
+    }
+    </style>
+</head>
+<body>
+    <div id="stdform">
+        <label for="fname">First Name:</label>
+        <input type="text" name="" id="'fname"><br>
+        <label for="sname">Second Name:</label>
+        <input type="text" name="" id="'sname"><br>
+        <label for="email">Email:</label>
+        <input type="email" name="" id="'email"><br>
+        <label for="password">Password:</label>
+        <input type="password" name="" id="password"><br>
+        <input type="submit" placeholder="submit" onclick="getdata" id="btn">
+    </div>
+    <script>
+        let stddata=document.getElementById('stdform');
+        let fname= document.getElementById('fname');
+        let sname= document.getElementById('sname');
+        let email= document.getElementById('email');
+        let password= document.getElementById('password');
+        function getdata(){
+            console.log(fname.value);
+            console.log(sname.value);
+            console.log(email.value);
+            console.log(password.value);
+            localstorage.setItem('fname',fname.value);
+            localStorage.setItem('sname',sname.value);
+            localStorage.setItem('email',email.value);
+            localStorage.setItem('password',password.value);
+        }
+        
+    </script>
+</body>
+</html>

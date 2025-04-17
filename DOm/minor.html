@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="stdform">
+        <label for="fname">FirstName</label>
+        <input type="text" name="" id="fname">
+        <label for="email">Email</label>
+        <input type="text" name="" id="email">
+        <label for="sname">SurName</label>
+        <input type="text" name="" id="sname">
+        <button>submit</button>
+    </form>
+    <div id="users"></div>
+    <script>
+        let form = document.getElementById("stdform");
+        let fname=document.getElementById("fname");
+        let user=document.getElementById("users");
+        let email=document.getElementById("email");
+        let sname=document.getElementById("sname");
+        let btn=document.querySelector("button");
+        btn.addEventListener('click',(event)=>{
+            event.preventDefault();
+            let FirstName=document.createElement("div");
+            let secondName=document.createElement("div");
+            let emailData= document.createElement("div");
+            FirstName.textContent=fname.value;
+            secondName.textContent=sname.value;
+            emailData.textContent=email.value;
+            user.appendChild(FirstName);
+            user.appendChild(secondName);
+            user.appendChild(emailData);
+            console.log(fname.value);
+            form.reset();
+        })
+    </script>
+</body>
+</html>
